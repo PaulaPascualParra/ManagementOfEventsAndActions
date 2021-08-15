@@ -5,14 +5,16 @@ from src.interface import guiNewFile, guiSendMail
 
 
 class GUI(QMainWindow):
-    # todo: handle they remove the ui
     def __init__(self):
         super().__init__()
         self.action = ""
         ui_name = 'managementSystemInterface.ui'
 
-        uic.loadUi(guiHelper.open_gui_helper(ui_name), self)
-        self.start()
+        try:
+            uic.loadUi(guiHelper.open_gui_helper(ui_name), self)
+            self.start()
+        except FileNotFoundError:
+            print("Cant find the file :(")
 
     def start(self):
         self.bttn_create_file.clicked.connect(self.open_new_file_window)

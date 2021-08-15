@@ -5,13 +5,15 @@ from src.decider import eventManagement
 
 
 class GUISendMail(QMainWindow):
-    # todo: handle they remove the ui
     def __init__(self):
         super().__init__()
         ui_name = 'sendEmail.ui'
 
-        uic.loadUi(guiHelper.open_gui_helper(ui_name), self)
-        self.start()
+        try:
+            uic.loadUi(guiHelper.open_gui_helper(ui_name), self)
+            self.start()
+        except FileNotFoundError:
+            print("Cant find the file :(")
 
     def start(self):
         self.bttn_send.clicked.connect(self.send_mail)

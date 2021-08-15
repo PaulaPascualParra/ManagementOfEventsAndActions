@@ -5,13 +5,15 @@ from src.decider import eventManagement
 
 
 class GUINewFile(QMainWindow):
-    # todo: handle they remove the ui
     def __init__(self):
         super().__init__()
         ui_name = 'newFile.ui'
 
-        uic.loadUi(guiHelper.open_gui_helper(ui_name), self)
-        self.start()
+        try:
+            uic.loadUi(guiHelper.open_gui_helper(ui_name), self)
+            self.start()
+        except FileNotFoundError:
+            print("Cant find the file :(")
 
     def start(self):
         self.bttn_browse.clicked.connect(self.browse)
