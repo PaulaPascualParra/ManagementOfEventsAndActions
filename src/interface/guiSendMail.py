@@ -1,0 +1,26 @@
+from PyQt5 import uic
+from PyQt5.QtWidgets import QMainWindow
+from src.helper import guiHelper
+from src.decider import eventManagement
+
+
+class GUISendMail(QMainWindow):
+    # todo: handle they remove the ui
+    def __init__(self):
+        super().__init__()
+        ui_name = 'sendEmail.ui'
+
+        uic.loadUi(guiHelper.open_gui_helper(ui_name), self)
+        self.start()
+
+    def start(self):
+        self.bttn_send.clicked.connect(self.send_mail)
+
+    def send_mail(self):
+        sender = self.txt_from.toPlainText()
+        password = self.txt_password.toPlainText()
+        to = self.txt_to.toPlainText()
+        subject = self.txt_subject.toPlainText()
+        message = self.txt_message.toPlainText()
+        eventManagement.receive_event("SEND_MAIL", sender=sender, password=password, to=to, subject=subject, message=message)
+        self.close()

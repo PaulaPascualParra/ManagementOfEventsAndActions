@@ -16,8 +16,8 @@
   <widget class="QLabel" name="lbl_welcome_message">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>80</y>
+     <x>130</x>
+     <y>60</y>
      <width>321</width>
      <height>61</height>
     </rect>
@@ -32,43 +32,30 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="bttn_new_routine">
+  <widget class="QPushButton" name="bttn_create_file">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>210</y>
+     <x>190</x>
+     <y>140</y>
      <width>201</width>
      <height>32</height>
     </rect>
    </property>
    <property name="text">
-    <string>Create New Routine</string>
+    <string>Create New File</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="bttn_modiffy_routine">
+  <widget class="QPushButton" name="bttn_send_mail">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>250</y>
+     <x>190</x>
+     <y>180</y>
      <width>201</width>
      <height>32</height>
     </rect>
    </property>
    <property name="text">
-    <string>Modify The Routine</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="bttn_execute_routine">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>290</y>
-     <width>201</width>
-     <height>32</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Execute The Routine</string>
+    <string>Send e-mail</string>
    </property>
   </widget>
  </widget>
