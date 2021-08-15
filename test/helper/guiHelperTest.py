@@ -15,7 +15,6 @@ class GuiHelperTest(unittest.TestCase):
         self.assertEqual(self.PATH, guiHelper.get_gui_path_helper(self.NAME))
 
 
-    # todo: case everything works
     @patch('os.path.dirname')
     def test_whenHaveAValidInput_raiseException(self, mock_dir):
         mock_dir.return_value = Exception
