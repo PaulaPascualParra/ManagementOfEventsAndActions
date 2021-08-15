@@ -7,6 +7,11 @@ switcher = {
 
 
 def receive_event(event_type, *args, **kwargs):
-    func = switcher.get(event_type, lambda: "Invalid action")
-    func(*args, **kwargs)
+    try:
+        func = switcher[event_type]
+        func(*args, **kwargs)
+
+    except Exception as e:
+        print("The event is not save" + str(e))
+        raise
 
