@@ -3,6 +3,7 @@ import smtplib
 import keyring
 
 # todo: make the send email secure
+# todo: check that the fields are valid
 
 def send_email(*args, **kwargs):
     try:
