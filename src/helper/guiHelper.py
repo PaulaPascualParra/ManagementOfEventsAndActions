@@ -15,3 +15,4 @@ def get_gui_path_helper(name):
     except Exception as e:
         print("Something went wrong" + str(e))
         raise
+    
