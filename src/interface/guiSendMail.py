@@ -10,7 +10,7 @@ class GUISendMail(QMainWindow):
         ui_name = 'sendEmail.ui'
 
         try:
-            uic.loadUi(guiHelper.open_gui_helper(ui_name), self)
+            uic.loadUi(guiHelper.get_gui_path_helper(ui_name), self)
             self.start()
         except FileNotFoundError:
             print("Cant find the file :(")
