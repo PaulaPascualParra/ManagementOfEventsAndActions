@@ -18,6 +18,7 @@ class GUINewFile(QMainWindow):
     def start(self):
         self.bttn_browse.clicked.connect(self.browse)
         self.btn_ok.clicked.connect(self.save_file)
+        self.txt_input_folder.setReadOnly(True)
 
     def save_file(self):
         name = self.txt_input_name_file.toPlainText()

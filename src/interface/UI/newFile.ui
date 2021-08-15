@@ -93,7 +93,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Browse or write the folder where you want to save the file</string>
+     <string>Browse the folder where you want to save the file</string>
     </property>
    </widget>
    <widget class="QPushButton" name="bttn_browse">
