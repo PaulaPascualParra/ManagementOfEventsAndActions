@@ -7,7 +7,7 @@ def get_gui_path_helper(name):
         ui_name = name
         # determine if application is a script file or frozen exe
         if getattr(sys, 'frozen', False):
-            application_path = os.path.join(os.path.dirname(sys.executable), "..", "interface")
+            application_path = os.path.join(os.path.dirname(sys.executable), "interface")
         elif __file__:
             application_path = os.path.join(os.path.dirname(__file__), "..", "interface", "UI")
 
